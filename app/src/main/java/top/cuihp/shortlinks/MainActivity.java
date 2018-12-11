@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ShortLinkUtils.newIns().toTransformation("https://blog.csdn.net/jennyliliyang/article/", new ShortLinkUtils.CallBack() {
             @Override
-            public void onPostExecute(RespResult respResult) {
+            public void onResult(RespResult respResult) {
                 Toast.makeText(MainActivity.this, respResult.getUrl_short(), Toast.LENGTH_SHORT).show();
             }
 

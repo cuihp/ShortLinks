@@ -35,7 +35,7 @@ public class ShortLinkUtils {
     private CallBack callBack;
 
     public interface CallBack {
-        void onPostExecute(RespResult respResult);
+        void onResult(RespResult respResult);
 
         void onError();
     }
@@ -109,7 +109,7 @@ public class ShortLinkUtils {
                         respResult.setUrl_short(longUrl);
                         respResult.setType(-1);
                     }
-                    callBack.onPostExecute(respResult);
+                    callBack.onResult(respResult);
                 } else {
                     callBack.onError();
                 }
