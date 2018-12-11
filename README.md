@@ -16,7 +16,7 @@
 
 ```
 	dependencies {
-    	        implementation 'com.github.cuihp:ShortLinks:v1.0.0'
+    	        implementation 'com.github.cuihp:ShortLinks:1.0'
     	}
 ```
 ## How to use
