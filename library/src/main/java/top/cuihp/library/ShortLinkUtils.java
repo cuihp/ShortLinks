@@ -13,6 +13,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 
 public class ShortLinkUtils {
 
@@ -61,7 +62,7 @@ public class ShortLinkUtils {
             RespResult respResult = new RespResult();
             try {
                 String baseUrl = "http://api.t.sina.com.cn/short_url/shorten.json?source=31641035&url_long=";
-                String requestUrl = baseUrl + longUrl;
+                String requestUrl = baseUrl + URLEncoder.encode(longUrl, "utf-8");
                 // 新建一个URL对象
                 URL url = new URL(requestUrl);
                 // 打开一个HttpURLConnection连接

@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ShortLinkUtils.newIns().toTransformation("https://blog.csdn.net/jennyliliyang/article/", new ShortLinkUtils.CallBack() {
+        ShortLinkUtils.newIns().toTransformation("https://blog.csdn.net/#/123/article/", new ShortLinkUtils.CallBack() {
             @Override
             public void onResult(RespResult respResult) {
                 Toast.makeText(MainActivity.this, respResult.getUrl_short(), Toast.LENGTH_SHORT).show();
